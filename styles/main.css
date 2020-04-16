@@ -1,42 +1,8 @@
-/* =================================================================== 
- *
- *  Abstract v1.0 Main Stylesheet
- *  url: www.styleshout.com
- *  09-06-2016
- *  ------------------------------------------------------------------
- *  TOC:
- *  01. webfonts and iconfonts
- *  02. base style overrides
- *  03. typography & general theme styles
- *  04. preloader
- *  05. forms
- *  06. buttons
- *  07. other components 
- *  08. common and reusable styles
- *  09. header styles
- *  10. page header
- *  11. content wrap
- *  12. bricks masonry
- *  13. footer
- *  14. blog styles
- *  15. page styles
- *
- * =================================================================== */
-
-
-/* ===================================================================
- *  01. webfonts and iconfonts - (_document-setup.scss)
- *
- * ------------------------------------------------------------------- */
  @import url("font-awesome/css/font-awesome.min.css");
  @import url("micons/micons.css");
  @import url("fonts.css");
  
  
- /* ===================================================================
-  *  02. base style overrides - (_document-setup.scss)
-  *
-  * ------------------------------------------------------------------- */
  html {
      font-size: 10px;
  }
@@ -75,9 +41,6 @@
      color: #111111;
  }
  
- /* ------------------------------------------------------------------- 
-  * links - (_document-setup.scss)  
-  * ------------------------------------------------------------------- */
  a,
  a:visited {
      color: #1237B1;
@@ -95,10 +58,6 @@
      border-color: rgba(21, 21, 21, 0.2);
  }
  
- /* ===================================================================
-  *  03. typography & general theme styles - (_document-setup.scss) 
-  *
-  * ------------------------------------------------------------------- */
  h1, h2, h3, h4, h5, h6, .h01, .h02, .h03, .h04, .h05, .h06 {
      font-family: "montserrat-bold", sans-serif;
      color: #151515;
@@ -266,9 +225,6 @@
      height: 0;
  }
  
- /* ------------------------------------------------------------------- 
-  * Lists - (_document-setup.scss)  
-  * ------------------------------------------------------------------- */
  ol {
      list-style: decimal;
  }
@@ -326,9 +282,6 @@
      margin: 0 0 0 2rem;
  }
  
- /* ------------------------------------------------------------------- 
-  * Spacing - (_document-setup)  
-  * ------------------------------------------------------------------- */
  button,
  .button {
      margin-bottom: 1.2;
@@ -355,9 +308,6 @@
      margin-bottom: 3rem;
  }
  
- /* ------------------------------------------------------------------- 
-  * floated image - (_document-setup)  
-  * ------------------------------------------------------------------- */
  img.pull-right {
      margin: 0.9rem 0 0 2.4rem;
  }
@@ -366,9 +316,6 @@
      margin: 0.9rem 2.4rem 0 0;
  }
  
- /* ------------------------------------------------------------------- 
-  * block grids paddings
-  * ------------------------------------------------------------------- */
  .bgrid {
      padding: 0 20px;
  }
@@ -401,9 +348,6 @@
  
  }
  
- /* ------------------------------------------------------------------- 
-  * tables - (_document-setup.scss)  
-  * ------------------------------------------------------------------- */
  table {
      border-width: 0;
      width: 100%;
@@ -442,9 +386,6 @@
      -webkit-overflow-scrolling: touch;
  }
  
- /* ------------------------------------------------------------------- 
-  * pace.js styles - minimal  - (_document-setup.scss)
-  * ------------------------------------------------------------------- */
  .pace {
      -webkit-pointer-events: none;
      pointer-events: none;
@@ -467,11 +408,6 @@
      height: 5px;
  }
  
- 
- /* ===================================================================
-  *  04. preloader - (_preloader-1.scss)
-  *
-  * ------------------------------------------------------------------- */
  #preloader {
      position: fixed;
      top: 0;
@@ -539,10 +475,6 @@
  
  }
  
- /* ===================================================================
-  *  05. forms - (_forms.scss)
-  *
-  * ------------------------------------------------------------------- */
  fieldset {
      border: none;
  }
@@ -670,9 +602,6 @@
      top: .15rem;
  }
  
- /**
-  * Style Placeholder Text  
-  */
  ::-webkit-input-placeholder {
      color: #777777;
  }
@@ -693,11 +622,6 @@
      color: #777777 !important;
  }
  
-  
- /* ===================================================================
-  *  06. buttons - (_button-essentials.scss)
-  *
-  * ------------------------------------------------------------------- */
  .button,
  a.button,
  button,
@@ -815,15 +739,7 @@
      border: 0;
      padding: 0;
  }
- 
- 
- /* ===================================================================
-  *  07. other components - (_others.scss)
-  *
-  * ------------------------------------------------------------------- */
- 
- /* alert box - (_alert-box.scss)
-  * ------------------------------------------------------------------- */
+
  .alert-box {
      padding: 2.1rem 4rem 2.1rem 3rem;
      position: relative;
@@ -860,12 +776,6 @@
      color: #bba31b;
  }
  
- 
- /* additional typo styles - (_additional-typo.scss)
-  * ------------------------------------------------------------------- */
- 
- /* drop cap 
-  * ----------------------------------------------- */
  .drop-cap:first-letter {
      float: left;
      margin: 0;
@@ -878,8 +788,6 @@
      color: #151515;
  }
  
- /* line definition style 
-  * ----------------------------------------------- */
  .lining dt,
  .lining dd {
      display: inline;
@@ -904,9 +812,7 @@
      content: ": ";
      margin-left: -0.2em;
  }
- 
- /* dictionary definition style 
-  * ----------------------------------------------- */
+
  .dictionary-style dt {
      display: inline;
      counter-reset: definitions;
@@ -926,18 +832,6 @@
      content: counter(definitions, decimal) ". ";
  }
  
- /** 
-  * Pull Quotes
-  * -----------
-  * markup:
-  *
-  * <aside class="pull-quote">
-  *		<blockquote>
-  *			<p></p>
-  *		</blockquote>
-  *	</aside>
-  *
-  * --------------------------------------------------------------------- */
  .pull-quote {
      position: relative;
      padding: 2.1rem 3rem 2.1rem 0px;
@@ -972,18 +866,6 @@
      content: none;
  }
  
- /** 
-  * Stats Tab
-  * ---------
-  * markup:
-  *
-  * <ul class="stats-tabs">
-  *		<li><a href="#">[value]<em>[name]</em></a></li>
-  *	</ul>
-  *
-  * Extend this object into your markup.
-  *
-  * --------------------------------------------------------------------- */
  .stats-tabs {
      padding: 0;
      margin: 3rem 0;
@@ -1022,63 +904,6 @@
      color: #888888;
  }
  
- /**
-  * pagination - (_pagination.scss)
-  * ------------------------------------------------------------------- */
- .pagination {
-     margin: 3rem auto;
-     text-align: center;
- }
- 
- .pagination ul li {
-     display: inline-block;
-     margin: 0;
-     padding: 0;
- }
- 
- .pagination .page-numbers {
-     font-family: "montserrat-bold", sans-serif;
-     font-size: 15px;
-     line-height: 24px;
-     display: inline-block;
-     padding: 6px 12px;
-     height: 36px;
-     margin-right: 6px;
-     margin-bottom: 9px;
-     color: #2b2b2b;
-     background-color: #dbdbdb;
-     -moz-transition: all 0.3s ease-in-out;
-     -o-transition: all 0.3s ease-in-out;
-     -webkit-transition: all 0.3s ease-in-out;
-     -ms-transition: all 0.3s ease-in-out;
-     transition: all 0.3s ease-in-out;
- }
- 
- .pagination .page-numbers:hover {
-     background: #000000;
-     color: white;
- }
- 
- .pagination .current,
- .pagination .current:hover {
-     background-color: #000000;
-     color: white;
- }
- 
- .pagination .inactive,
- .pagination .inactive:hover {
-     background-color: #DBDBDB;
-     color: #919191;
- }
- 
- 
- /* ===================================================================
-  *  08. common and reusable styles 
-  *
-  * ------------------------------------------------------------------- */
- 
- /* animation stuff - (_common-styles.scss) 
-  * ------------------------------------------------------------------- */
  .js .animate-this {
      opacity: 0;
  }
@@ -1087,8 +912,6 @@
      opacity: 1;
  }
  
- /* masonry entries - (_common-styles.scss) 
-  * ------------------------------------------------------------------- */
  .bricks-wrapper .entry {
      margin-bottom: 40px;
  }
@@ -1218,9 +1041,6 @@
      color: #999999;
  }
  
- 
- /* featured post slider - (_common-styles.scss) 
-  * ------------------------------------------------------------------- */
  #featured-post-slider {
      position: relative;
  }
@@ -1316,8 +1136,6 @@
      border-color: rgba(255, 255, 255, 0.2);
  }
  
- /* featured-post-slider direction nav
-  * --------------------------------------------------------- */
  #featured-post-slider .flex-direction-nav li {
      position: absolute;
      top: 50%;
@@ -1366,9 +1184,6 @@
      right: 0;
  }
  
- /* responsive:
- /* featured slider
- /* ------------------------------------------------------------------- */
  @media only screen and (max-width:1024px) {
      .featured-post-slide .slide-title {
          font-size: 3.7rem;
@@ -1420,13 +1235,7 @@
      }
  
  }
- 
-  
- /*  post formats - masonry view - (_common-styles.scss) 
-  * ------------------------------------------------------------------- */
- 
- /* format quote & format link
-  * --------------------------------------- */
+
  .format-quote,
  .format-link {
      text-align: center;
@@ -1520,8 +1329,6 @@
      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
  }
  
- /* format video
-  * --------------------------------------- */
  .format-video .entry-thumb a {
      cursor: zoom-in;
      display: block;
@@ -1547,11 +1354,6 @@
      cursor: zoom-in;
  }
  
- 
- /* ===================================================================
-  *  09. header styles - (_layout.scss)
-  *
-  * ------------------------------------------------------------------- */
  header {
      width: 100%;
      background: #DBDBDB url(../images/escheresque_@2X.png) repeat;
@@ -1579,9 +1381,6 @@
  
  }
  
- /* ------------------------------------------------------------------- 
-  * header logo - (_layout.css) 
-  * ------------------------------------------------------------------- */
  header .logo {
      position: absolute;
      left: 35px;
@@ -1609,9 +1408,6 @@
      transition: all 0.5s ease-in-out;
  }
  
- /* responsive:
-  * header logo
-  * ------------------------------------------------------------------- */
  @media only screen and (max-width:768px) {
      header .logo {
          left: 45px;
@@ -1639,9 +1435,6 @@
  
  }
  
- /* ------------------------------------------------------------------- 
-  * navigation - (_layout.css) 
-  * ------------------------------------------------------------------- */
  .triggers {
      position: absolute;
      right: 35px;
@@ -1658,9 +1451,6 @@
      display: none;
  }
  
- /* responsive:
-  * triggers
-  * ------------------------------------------------------------------- */
  @media only screen and (max-width:768px) {
      .triggers {
          right: 40px;
@@ -1683,9 +1473,6 @@
  
  }
  
- /* ------------------------------------------------------------------- 
-  * main navigation - (_layout.css) 
-  * ------------------------------------------------------------------- */
  #main-nav-wrap {
      display: table;
      float: right;
@@ -1789,9 +1576,6 @@
      display: block;
  }
  
- /* -------------------------------------------------------------------
-  * main navigation - mobile view
-  * ------------------------------------------------------------------- */
  @media only screen and (max-width:768px) {
      .triggers {
          z-index: 601;
@@ -2020,8 +1804,6 @@
  
  }
  
- /* make sure the menu is visible on larger screens
-  * ------------------------------------------------------------------- */
  @media only screen and (min-width:769px) {
      #main-nav-wrap ul.main-navigation {
          display: table-cell !important;
@@ -2029,9 +1811,6 @@
  
  }
  
- /* ------------------------------------------------------------------- 
-  * search wrap - (_layout.css) 
-  * ------------------------------------------------------------------- */
  .search-wrap {
      display: block;
      text-align: center;
@@ -2167,9 +1946,6 @@
      visibility: visible;
  }
  
- /* responsive:
-  * search wrap
-  * ------------------------------------------------------------------- */
  @media only screen and (max-width:768px) {
      .search-wrap .search-form::after {
          font-size: 1.5rem;
@@ -2195,11 +1971,6 @@
  
  }
  
- 
- /* ===================================================================
-  *  10. page header - (_layout.scss)
-  *
-  * ------------------------------------------------------------------- */
  #page-header {
      padding: 4.2rem 0 0 0;
      text-align: center;
@@ -2217,11 +1988,6 @@
      color: #999999;
  }
  
- 
- /* ===================================================================
-  *  11. content wrap - (_layout.scss)
-  *
-  * ------------------------------------------------------------------- */
  #content-wrap {
      margin-top: 6.6rem;
  }
@@ -2274,9 +2040,6 @@
      margin-bottom: 0.9rem;
  }
  
- /* responsive:
-  * content wrap
-  * ------------------------------------------------------------------- */
  @media only screen and (max-width:1024px) {
      #content-wrap .row {
          max-width: 880px;
@@ -2330,11 +2093,6 @@
  
  }
  
- 
- /* ===================================================================
-  *  12. bricks masonry - (_layout.scss)
-  *
-  * ------------------------------------------------------------------- */
  #bricks {
      padding-top: 4.2rem;
  }
@@ -2392,9 +2150,6 @@
      background: #151515;
  }
  
- /* responsive: 
- /* bricks masonry
-  * ------------------------------------------------------------------- */
  @media only screen and (max-width:1280px) {
      .bricks-wrapper .grid-sizer,
      .bricks-wrapper .brick {
@@ -2452,11 +2207,6 @@
  
  }
  
- 
- /* ===================================================================
-  *  13. footer - (_layout.scss)
-  *
-  * ------------------------------------------------------------------- */
  footer {
      padding-top: 9rem;
      padding-bottom: 3rem;
@@ -2557,9 +2307,6 @@
      display: none;
  }
  
- /* responsive:
-  * footer
-  * ------------------------------------------------------------------- */
  @media only screen and (max-width:768px) {
      .footer-main .footer-info {
          text-align: center;
@@ -2626,9 +2373,6 @@
  
  }
  
- /* -------------------------------------------------------------------
-  * go to top
-  * ------------------------------------------------------------------- */
  #go-top {
      position: fixed;
      bottom: 24px;
@@ -2672,9 +2416,6 @@
      color: #FFFFFF;
  }
  
- /* responsive:
-  * go top
-  * ------------------------------------------------------------------- */
  @media only screen and (max-width:600px) {
      #go-top {
          bottom: 0;
@@ -2683,14 +2424,6 @@
  
  }
  
- 
- /* ===================================================================
-  *  14. blog styles
-  *
-  * ------------------------------------------------------------------- */
- 
- /* single post - (_blog.scss) 
-  * ------------------------------------------------------------------- */
  .blog-single .entry-meta {
      font-family: "muli-regular", sans-serif;
      font-size: 1.5rem;
@@ -2825,9 +2558,6 @@
      color: #000000;
  }
  
- /* responsive:
-  * single post
-  * ------------------------------------------------------------------- */
  @media only screen and (max-width:768px) {
      .blog-single .entry-meta {
          font-size: 1.5rem;
@@ -2863,16 +2593,11 @@
  
  }
  
- 
- /* comments - (_blog.scss) 
-  * ------------------------------------------------------------------- */
  .comments-wrap {
      background-color: rgba(0, 0, 0, 0.08);
      padding: 7.8rem 0 9rem;
  }
  
- /* comments
-  * -------------------------------------------------- */
  #comments {
      padding-top: 1.2rem;
      padding-bottom: 1.2rem;
@@ -2955,8 +2680,6 @@
      padding-top: 1.8rem;
  }
  
- /* comments form
-  * ---------------------------- */
  #comments .respond {
      padding-top: 4.2rem;
      border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -2970,9 +2693,6 @@
      margin-bottom: 3.9rem;
  }
  
- /* responsive:
-  * comments
-  * ------------------------------------------------------------------- */
  @media only screen and (max-width:768px) {
      #comments form button {
          width: 100%;
@@ -2995,9 +2715,6 @@
  
  }
  
-  
- /* post format gallery (_blog.scss)
-  * ------------------------------------------------------------------- */
  .format-gallery .post-slider {
      position: relative;
      cursor: pointer;
@@ -3035,9 +2752,6 @@
      opacity: 1;
  }
  
-  
- /* post format audio (_blog.scss)
-  * ------------------------------------------------------------------- */
  .format-audio .audio-wrap {
      position: absolute !important;
      bottom: 0;
@@ -3179,17 +2893,6 @@
      top: 19px;
  }
  
- 
- /* ===================================================================
-  *  15. page styles
-  *
-  * ------------------------------------------------------------------- */
-  
- /* contact page
-  * ------------------------------------------------------------------- */
- 
- /* map
-  * ----------------------------------------------- */
  #map-wrap {
      background: white;
      z-index: 800;
@@ -3275,8 +2978,6 @@
      color: #034e4a;
  }
  
- /* contact form
-  * ----------------------------------------------- */
  #cForm {
      margin-top: 3.6rem;
  }
